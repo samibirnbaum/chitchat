@@ -1,13 +1,12 @@
 //controller for the home template
 (function() {
 
-    function HomeCtrl() {
-    
+    function HomeCtrl(Room) {
+        this.room = Room; //this injects the room service but also puts it on the scope of this controller so can be accessed in the view
     }
 
     
-    
     angular
         .module("blocChat")
-        .controller("HomeCtrl", HomeCtrl);
+        .controller("HomeCtrl", ["Room", HomeCtrl]);
 })();
