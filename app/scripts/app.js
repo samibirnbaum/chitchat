@@ -17,7 +17,7 @@
 
 
     angular
-        .module("blocChat", ["ui.router", "firebase"]) //inject 2 modules we need for this app, ui.router and firebase DbaaS
+        .module("blocChat", ["ui.router", "firebase", "ui.bootstrap"]) //inject 2 modules we need for this app, ui.router and firebase DbaaS
         .config(config);
 
 

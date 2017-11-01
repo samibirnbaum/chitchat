@@ -3,6 +3,11 @@
 
 <h3>Chat Rooms</h3>
 
-<ul>
-    <li ng-repeat="room in home.room.all">{{room.$value}}</li>
-</ul>
+<section>
+    <!--The Modal that gets opened - has its own controller-->
+    <button type="button" class="btn btn-info" ng-click="home.open()">Open me!</button>
+
+    <ul>
+        <li ng-repeat="room in home.room.all">{{room.$value}}</li>
+    </ul>
+</section>
