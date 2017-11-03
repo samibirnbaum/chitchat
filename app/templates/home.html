@@ -4,8 +4,8 @@
 <h3>Chat Rooms</h3>
 
 <section>
-    <!--The Modal that gets opened - has its own controller-->
-    <button type="button" class="btn btn-info" ng-click="home.open()">Open me!</button>
+    <!--This button has its own controller to open the modal-->
+    <button type="button" class="btn btn-info" ng-controller="ModalCtrl as modal" ng-click="modal.open()">Add A Chat Room</button>
 
     <ul>
         <li ng-repeat="room in home.room.all">{{room.$value}}</li>

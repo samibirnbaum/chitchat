@@ -1,1 +1,15 @@
-<h1>I am the modalInstance template</h1>
+<!--this modal instance has its own controller-->
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Create New Chat Room</h3>
+</div>
+
+<div class="modal-body" id="modal-body">
+    <form ng-submit="modalInstance.submit(roomName)">
+        <input type="text" ng-model="roomName" size="35" placeholder="Enter Name of Chat Room Here...">        
+    </form>    
+</div>
+    
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="modalInstance.submit(roomName)">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="modalInstance.cancel()">Cancel</button>
+</div>
