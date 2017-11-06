@@ -1,13 +1,21 @@
 <!--template for the home state-->
-<h2>Home Template</h2>
-
-<h3>Chat Rooms</h3>
-
-<section>
+<section class="sidebar">
+    <h3>Chat Rooms</h3>
     <!--This button has its own controller to open the modal-->
     <button type="button" class="btn btn-info" ng-controller="ModalCtrl as modal" ng-click="modal.open()">Add A Chat Room</button>
 
-    <ul>
-        <li ng-repeat="room in home.room.all">{{room.$value}}</li>
+    <ul class=room_names>
+        <li ng-repeat="room in home.room.all" ng-click="home.updateActiveRoom(room.$value); home.message.getByRoomId(room.$id)">{{room.$value}}</li>
     </ul>
+</section>
+{{home.room.all}}
+{{home.message.ref}}
+<section class="chat_messages">
+    <h3>{{home.activeRoom}}</h3>
+    <h6>Username</h6>
+    <p>message goes in here</p>
+    <h6>Username</h6>
+    <p>message goes in here</p>
+    <h6>Username</h6>
+    <p>message goes in here</p>
 </section>

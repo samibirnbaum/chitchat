@@ -7,3 +7,47 @@
     background: rgba(0, 0, 0, 0.5);
     }
 /******************/
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar{
+    background: lightslategray;
+    float: left;
+    padding-top: 15px;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+    border-right: 3px ridge white;
+}
+
+.chat_messages{
+    background: lightgray;
+    float: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    width: 85%;
+    height: 100%;
+}
+
+.room_names{
+    text-align: left;
+    list-style-type: none;
+}
+
+.room_names li{
+    width: 60%;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    border-radius: .25rem;    
+}
+
+.room_names li:hover{
+    cursor: pointer;
+    background-color: #17a2b8;
+    color: white;
+}

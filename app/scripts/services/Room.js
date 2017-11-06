@@ -10,7 +10,7 @@
         /*PUBLIC ATTRIBUTES*/
         Room.all = rooms;
 
-        /*PUBLIC ATTRIBUTES*/
+        /*PUBLIC FUNCTIONS*/
         Room.add = function(room){ //add rooms to the firebase db - takes in a room object
             rooms.$add(room);
         };
