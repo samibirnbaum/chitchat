@@ -1,0 +1,14 @@
+<!--this modal instance has its own controller-->
+<div class="modal-header">
+    <h3 class="modal-title text-center" id="modal-title">Enter Username</h3>
+</div>
+
+<div class="modal-body" id="modal-body">
+    <form ng-submit="UsernameModalInstance.submitUsername(username)" id="usernameform">
+        <input type="text" ng-model="username" required autofocus size="25" pattern="[^\s]+" title="No Spaces Allowed" placeholder="Enter Username Here...">        
+    </form>    
+</div>
+    
+<div class="modal-footer">
+    <button class="btn btn-primary col-md-12 center-block" title="You must enter a username to proceed" type="submit" form="usernameform">Submit Username</button>
+</div>
