@@ -9,10 +9,15 @@
         
         /*PUBLIC ATTRIBUTES*/
         Room.all = rooms;
+        Room.currentRoom = "Please select a chat room..."
 
         /*PUBLIC FUNCTIONS*/
         Room.add = function(room){ //add rooms to the firebase db - takes in a room object
             rooms.$add(room);
+        };
+
+        Room.updateCurrentRoom = function(roomName){
+            this.currentRoom = roomName;
         };
         
         return Room;

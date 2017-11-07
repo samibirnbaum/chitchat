@@ -5,17 +5,13 @@
     <button type="button" class="btn btn-info" ng-controller="ModalCtrl as modal" ng-click="modal.open()">Add A Chat Room</button>
 
     <ul class=room_names>
-        <li ng-repeat="room in home.room.all" ng-click="home.updateActiveRoom(room.$value); home.message.getByRoomId(room.$id)">{{room.$value}}</li>
+        <li ng-repeat="room in home.room.all" ng-click="home.room.updateCurrentRoom(room.$value); home.message.getByRoomId(room.$id)">{{room.$value}}</li>
     </ul>
 </section>
 {{home.room.all}}
-{{home.message.ref}}
+{{home.message.allMessages}}
 <section class="chat_messages">
-    <h3>{{home.activeRoom}}</h3>
-    <h6>Username</h6>
-    <p>message goes in here</p>
-    <h6>Username</h6>
-    <p>message goes in here</p>
-    <h6>Username</h6>
-    <p>message goes in here</p>
+    <h3>{{home.room.currentRoom}}</h3>
+    <h6>Username:</h6>
+    <p class="message" ng-repeat="message_object in home.message.currentMessages | orderBy:'sentAt'">{{message_object.content}}</p>
 </section>

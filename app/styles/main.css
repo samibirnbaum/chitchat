@@ -32,6 +32,11 @@ body, html{
     height: 100%;
 }
 
+.message{
+    border-bottom: 1px solid black;
+    width: 80%;
+}
+
 .room_names{
     text-align: left;
     list-style-type: none;
