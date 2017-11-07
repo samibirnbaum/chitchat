@@ -8,10 +8,15 @@
         <li ng-repeat="room in home.room.all" ng-click="home.room.updateCurrentRoom(room.$value); home.message.getByRoomId(room.$id)">{{room.$value}}</li>
     </ul>
 </section>
-{{home.room.all}}
-{{home.message.allMessages}}
+
 <section class="chat_messages">
     <h3>{{home.room.currentRoom}}</h3>
-    <h6>Username:</h6>
-    <p class="message" ng-repeat="message_object in home.message.currentMessages | orderBy:'sentAt'">{{message_object.content}}</p>
+    <h6 class="message" ng-repeat="message_object in home.message.currentMessages | orderBy:'sentAt'">{{message_object.username + ": " + message_object.content}}</h6>
+</section>
+
+<section class="send_message">
+    <form id="message_input" ng-submit="home.message.sendMessage(message)">
+        <textarea ng-model="message" placeholder="Type your message here..." required></textarea>        
+        <button class="btn btn-info" type="submit">Send...</button>
+    </form>
 </section>
