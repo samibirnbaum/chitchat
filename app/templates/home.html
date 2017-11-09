@@ -15,8 +15,8 @@
 </section>
 
 <section class="send_message">
-    <form id="message_input" ng-submit="home.message.sendMessage(message)">
-        <textarea ng-model="message" placeholder="Type your message here..." required></textarea>        
+    <form id="message_input" ng-submit="home.sendMessage()">
+        <textarea ng-model="home.sentMessage" placeholder="Type your message here..." required></textarea>        
         <button class="btn btn-info" type="submit">Send...</button>
     </form>
 </section>
